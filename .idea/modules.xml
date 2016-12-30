@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/IOJavapio.iml" filepath="$PROJECT_DIR$/IOJavapio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaPIO.iml" filepath="$PROJECT_DIR$/JavaPIO.iml" />
     </modules>
   </component>
 </project>

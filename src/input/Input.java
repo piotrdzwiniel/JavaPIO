@@ -49,7 +49,7 @@ public class Input {
     }
 
     /*
-    LOAD DATA FROM FILE METHODS
+    LOAD DATA METHODS
      */
     public String asSingleString(File file) throws IOException {
         String content = new String(Files.readAllBytes(Paths.get(file.toURI())));
