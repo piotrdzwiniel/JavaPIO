@@ -10,6 +10,10 @@ at least in version 1.8.0_77.
 
 In order to use JavaPIO library just copy `org.JavaPIO.*` package to your project.
 
+<h3>Docs</h3>
+
+For library documentation go to http://piotrdz.ayz.pl/javapio/docs/index.html.
+
 <h3>License</h3>
 
 The source code is released under the terms of <a href="https://github.com/piotrdzwiniel/Specvis/blob/master/GNU%20GPL%20v3.txt">
