@@ -1,0 +1,3 @@
+1. Create new content.
+2. Remember about simultaneous creation of documentation.
+3. At the end of work-day commit and push changes, as well as create java-docs and update it on JavaPIO docs website.

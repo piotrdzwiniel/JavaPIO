@@ -3,6 +3,7 @@ package org.JavaPIO.input;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 
 /**
  * Created by Piotr Dzwiniel on 29.12.2016.
@@ -13,7 +14,7 @@ public class Input {
     PRIVATE FIELDS
      */
 
-    private File file;
+    private File file; // TODO: Does this field is realy necessary?
 
     /*
     CONSTRUCTORS
@@ -101,16 +102,44 @@ public class Input {
     }
 
     /**
+     * Read lines from a given file.
+     * @param file the java.io.File object.
+     * @return ArrayList of individual lines read from file in a form of a Strings.
+     * @throws IOException when creation of BufferedReader object throws IOException.
+     */
+    public ArrayList<String> asArrayListOfIndividualLines(File file) throws IOException {
+        ArrayList<String> arrayList = new ArrayList<>();
+
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
+        while (bufferedReader.readLine() != null) {
+            arrayList.add(bufferedReader.readLine());
+        }
+        bufferedReader.close();
+
+        return arrayList;
+    }
+
+    /**
+     * Read lines from a given file - in this case from private "file" field.
+     * @return ArrayList of individual lines read from file in a form of a Strings.
+     * @throws NullPointerException when private "field" is not initialized.
+     * @throws IOException when readLines(File file) method throws IOException.
+     */
+    public ArrayList<String> asArrayListOfIndividualLines() throws NullPointerException, IOException {
+        return asArrayListOfIndividualLines(file);
+    }
+
+    /**
      * Get file content as one-dimensional byte array of individual digits.
      * @param file the java.io.File object.
-     * @return the one-dimensional byte array of individual digits read from passed "file" parameter.
+     * @return the one-dimensional Byte array of individual digits read from passed "file" parameter.
      * @throws IOException when asSingleString(File file) method throws IOException.
      */
-    public byte[] asVectorOfIndividualByteDigits(File file) throws IOException {
+    public Byte[] asVectorOfIndividualByteDigits(File file) throws IOException {
         String content = asSingleString(file);
         if (content.matches("[0-9]+")) {
             String[] individualCharacters = content.split("");
-            byte[] individualBytes = new byte[individualCharacters.length];
+            Byte[] individualBytes = new Byte[individualCharacters.length];
             for (int i = 0; i < individualCharacters.length; i++) {
                 individualBytes[i] = Byte.parseByte(individualCharacters[i]);
             }
@@ -122,12 +151,42 @@ public class Input {
 
     /**
      * Get file content as one-dimensional byte array of individual digits.
-     * @return the one-dimensional byte array of individual digits read from private "file" field.
+     * @return the one-dimensional Byte array of individual digits read from private "file" field.
      * @throws NullPointerException when private "field" is not initialized.
      * @throws IOException when asVectorOfIndividualByteDigits(File file) method throws IOException.
      */
-    public byte[] asVectorOfIndividualByteDigits() throws NullPointerException, IOException {
+    public Byte[] asVectorOfIndividualByteDigits() throws NullPointerException, IOException {
         return asVectorOfIndividualByteDigits(file);
+    }
+
+    /**
+     * Get file content as one-dimensional vector of integer values splitted by specific regex.
+     * @param file the java.io.File object.
+     * @param regex dividing rule for String content of the file.
+     * @return one-dimensional vector of integer values.
+     * @throws IOException when asSingleString(File file) method throws IOException.
+     * @throws NumberFormatException when Integer.parseInt(String string) throws NumberFormatException.
+     */
+    public Integer[] asVectorOfIntegerValues(File file, String regex) throws IOException, NumberFormatException {
+        String content = asSingleString(file);
+        String[] divided = content.split(regex);
+        Integer[] vector = new Integer[divided.length];
+        for (int i = 0; i < vector.length; i++) {
+            vector[i] = Integer.parseInt(divided[i]);
+        }
+        return vector;
+    }
+
+    /**
+     * Get file content as one-dimensional vector of integer values splitted by specific regex.
+     * @param regex dividing rule for String content of the file.
+     * @return one-dimensional vector of integer values.
+     * @throws NullPointerException when private "field" is not initialized.
+     * @throws IOException when asVectorOfIntegerValues(File file, String regex) method throws IOException.
+     * @throws NumberFormatException when asVectorOfIntegerValues(File file, String regex) method throws IOException.
+     */
+    public Integer[] asVectorOfIntegerValues(String regex) throws NullPointerException, IOException, NumberFormatException {
+        return asVectorOfIntegerValues(file, regex);
     }
 
     /*
