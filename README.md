@@ -21,7 +21,7 @@ GNU General Public License in version 3</a> as published by the Free Software Fo
 mail to me - piotr.dzwiniel@gmail.com.
 
 <h2>Usage examples</h2>
-<h3>public class org.JavaPIO.utility.FileUtility</h3>
+<h3><a href="https://github.com/piotrdzwiniel/JavaPIO/blob/master/src/org/JavaPIO/utility/FileUtility.java">public class org.JavaPIO.utility.FileUtility</a></h3>
 <h4>Example 1 - get file extension</h4>
 Java code:
 
@@ -34,7 +34,7 @@ Console output:
 
     txt
 
-<h3>public class org.JavaPIO.input.FileInput</h3>
+<h3><a href="https://github.com/piotrdzwiniel/JavaPIO/blob/master/src/org/JavaPIO/input/FileInput.java">public class org.JavaPIO.input.FileInput</a></h3>
 <h4>Example 1 - reading file content as single string</h4>
 File content ("<a href="https://github.com/piotrdzwiniel/JavaPIO/blob/master/DATA_1.txt">DATA_1.txt</a>"):
     
