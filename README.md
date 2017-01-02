@@ -2,7 +2,7 @@
 
 <h3>Description & requirements</h3>
 
-JavaPIO is a high-level Java Public I/O library <b>designed for managing various file types</b>. Library is written with the use 
+JavaPIO is a high-level Java Public I/O library designed for managing various file types. Library is written with the use 
 of Java in version 1.8.0_77 using functionalities of Java 1.8. Thus, JavaPIO requires software development kit (SDK) 
 at least in version 1.8.0_77.
 
