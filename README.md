@@ -36,7 +36,7 @@ Console output:
 
 <h3>public class org.JavaPIO.input.FileInput</h3>
 <h4>Example 1 - reading file content as single string</h4>
-File content ("DATA_1.txt"):
+File content ("<a href="https://github.com/piotrdzwiniel/JavaPIO/blob/master/DATA_1.txt">DATA_1.txt</a>"):
     
     When you are courting a nice girl an hour seems like a second.
     When you sit on a red-hot cinder a second seems like an hour.
@@ -69,7 +69,7 @@ Java code:
 Console output the same as in Example 1.
 
 <h4>Example 3 - reading file content as individual characters</h4>
-File content ("DATA_2.txt"):
+File content ("<a href="https://github.com/piotrdzwiniel/JavaPIO/blob/master/DATA_2.txt">DATA_2.txt</a>"):
 
     1234 5678
 
@@ -113,7 +113,7 @@ Console output:
     8
 
 <h4>Example 5 - reading from the file separated float values</h4>
-File content ("DATA_3.txt"):
+File content ("<a href="https://github.com/piotrdzwiniel/JavaPIO/blob/master/DATA_3.txt">DATA_3.txt</a>"):
 
     123.4325 1323.3125454 123.1234 3.12315
     
